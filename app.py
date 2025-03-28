@@ -34,9 +34,8 @@ try:
     # 테이블
     st.subheader("📄 게시물 목록")
     for _, row in filtered.iterrows():
-        st.markdown(f"**{row['date']}**  
-{row['caption']}  
-[🔗 인스타그램 링크]({row['link']})")
+        text = f"**{row['date']}**\n{row['caption']}\n🔗 [인스타그램 링크]({row['link']})"
+        st.markdown(text)
         st.image(row['image'], width=150)
         st.markdown("---")
 
